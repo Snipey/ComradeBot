@@ -1,0 +1,24 @@
+[package]
+name = "comrade"
+author = "Stephen F<contact@snipey.dev>"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dotenv = "0.15"
+tracing = "0.1.23"
+tracing-subscriber = "0.3.10"
+
+
+[dependencies.songbird]
+version = "0.2.2"
+features = ["builtin-queue", "yt-dlp"]
+
+[dependencies.serenity]
+version = "0.10.10"
+default-features = false
+features = ["cache", "collector", "client", "gateway", "model", "rustls_backend", "unstable_discord_api", "voice", "framework", "standard_framework"]
+
+[dependencies.tokio]
+version = "1.17.0"
+features = ["macros", "rt-multi-thread"]
